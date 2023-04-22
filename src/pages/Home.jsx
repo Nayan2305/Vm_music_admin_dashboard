@@ -1,9 +1,9 @@
-import {Navbar} from "../components/index.js";
+import {NavBar} from '../components/index.js';
 
 function Home(){
     return(
         <>
-            <Navbar />
+            <NavBar />
         </>
     )
 }

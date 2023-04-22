@@ -1,40 +1,34 @@
-import React from 'react'
-import { NavLink } from 'react-router-dom'
-import { useSelector } from 'react-redux'
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import NavDropdown from 'react-bootstrap/NavDropdown';
 
-const Navbar = () => {
-    const state = useSelector(state => state.handleCart)
-    return (
-        <nav className="navbar navbar-expand-lg navbar navbar-light py-3 sticky-top"style={{ backgroundColor: '#18004d', color: 'white' }} >
-            <div className="container">
-                <NavLink className="navbar-brand fw-bold fs-4 px-2  text-white" to="/">V M Music Systems</NavLink>
-                <button className="navbar-toggler mx-2" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon"></span>
-                </button>
-
-                <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul className="navbar-nav m-auto my-2 text-center">
-                        <li className="nav-item" >
-                            <NavLink className="nav-link text-white" to="/">Customers</NavLink>
-                        </li>
-                        <li className="nav-item">
-                            <NavLink className="nav-link text-white" to="/product">Products</NavLink>
-                        </li>
-                        <li className="nav-item">
-                            <NavLink className="nav-link text-white" to="/about">Orders</NavLink>
-                        </li>                        
-                    </ul>
-                    {/* <div className="buttons text-center">
-                        <NavLink to="/login" className="btn btn-outline-dark m-2  text-white"><i className="fa fa-sign-in-alt mr-1  text-white" ></i> Login</NavLink>
-                        <NavLink to="/register" className="btn btn-outline-dark m-2  text-white"><i className="fa fa-user-plus mr-1  text-white"></i> Register</NavLink>
-                        <NavLink to="/cart" className="btn btn-outline-dark m-2  text-white" ><i className="fa fa-cart-shopping mr-1  text-white"></i> Cart ({state.length}) </NavLink>
-                    </div> */}
-                </div>
-
-
-            </div>
-        </nav>
-    )
+function NavBar() {
+  return (
+    <Navbar bg="light" expand="lg">
+      <Container>
+        <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="me-auto">
+            <Nav.Link href="#home">VM Music</Nav.Link>
+            <Nav.Link href="#link">Link</Nav.Link>
+            <NavDropdown title="Dropdown" id="basic-nav-dropdown">
+              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.2">
+                Another action
+              </NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item href="#action/3.4">
+                Separated link
+              </NavDropdown.Item>
+            </NavDropdown>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
+  );
 }
 
-export default Navbar
+export default NavBar;
