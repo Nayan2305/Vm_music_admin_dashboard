@@ -1,4 +1,4 @@
-import {NavBar,Slidebar,Customers} from '../components/index.js';
+import {NavBar,Slidebar,Customers,Orders} from '../components/index.js';
 
 function Home(){
     return(
@@ -6,6 +6,7 @@ function Home(){
             <NavBar />
             <Slidebar/>
             <Customers/>
+            <Orders/>
         </>
     )
 }

@@ -9,7 +9,7 @@ function Slidebar() {
         <a href="#">Orders</a>
         <br>
         </br>
-        <a href="#">Customers</a>
+        <a href="#" >Customers</a>
         <br>
         </br>
         <a href="#">Add product</a>
