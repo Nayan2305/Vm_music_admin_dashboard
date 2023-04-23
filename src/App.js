@@ -1,10 +1,10 @@
 
 import './App.css';
-import {Home, AddProduct} from './pages/index'
+import {Home, AddProduct, RemoveProduct} from './pages/index'
 function App() {
   return (
     <>
-    <AddProduct/>
+    <RemoveProduct/>
     </>  
     
   );
