@@ -14,7 +14,6 @@ const Orders = () => {
           <th>Name</th>
           <th>Quantity</th>
           <th>Product Name</th>
-
         </tr>
       </thead>
       <tbody>
