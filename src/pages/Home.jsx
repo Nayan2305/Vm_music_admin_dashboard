@@ -1,10 +1,11 @@
-import {NavBar,Slidebar} from '../components/index.js';
+import {NavBar,Slidebar,Customers} from '../components/index.js';
 
 function Home(){
     return(
         <>
             <NavBar />
             <Slidebar/>
+            <Customers/>
         </>
     )
 }
